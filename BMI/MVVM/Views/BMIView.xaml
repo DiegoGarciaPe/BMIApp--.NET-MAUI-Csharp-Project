@@ -10,8 +10,8 @@
 
         <ScrollView.Background>
             <LinearGradientBrush EndPoint="0,1">
-                <GradientStop Offset="0.0" Color="#572375" />
-                <GradientStop Offset="1" Color="#a594f9" />
+                <GradientStop Offset="0.0" Color="#FF96A3" />
+                <GradientStop Offset="1" Color= "#0F3E36"/>
             </LinearGradientBrush>
         </ScrollView.Background>
 
@@ -21,7 +21,7 @@
             VerticalOptions="Center">
 
             <!--#region Height-->
-            <Frame>
+            <Frame BackgroundColor="#00695C" CornerRadius="32">
                 <VerticalStackLayout>
                     <Label
                         FontSize="Large"
@@ -32,7 +32,8 @@
                         Margin="0,15,0,0"
                         Interval="25"
                         Maximum="225"
-                        Minimum="25">
+                        Minimum="25"
+                        BackgroundColor="#00695C">
                         <gauge:SfLinearGauge.MarkerPointers>
                             <gauge:LinearContentPointer
                                 x:Name="HeightPointer"
@@ -57,7 +58,8 @@
             <!--#endregion Height-->
 
             <!--#region Width-->
-            <Frame>
+            <Frame BackgroundColor="#00695C"
+                   CornerRadius="32">
                 <VerticalStackLayout>
                     <Label
                         FontSize="Large"
@@ -68,7 +70,8 @@
                         Margin="0,15,0,0"
                         Interval="25"
                         Maximum="200"
-                        Minimum="0">
+                        Minimum="0"
+                        BackgroundColor="#00695C">
                         <gauge:SfLinearGauge.MarkerPointers>
                             <gauge:LinearContentPointer
                                 x:Name="WeightPointer"
@@ -93,13 +96,15 @@
             <!--#endregion Width-->
 
             <!--#region Result-->
-            <Frame>
+            <Frame BackgroundColor="#00695C"
+                   CornerRadius="32">
                 <VerticalStackLayout>
                     <Label
-                        FontSize="Title"
+                        FontSize="Medium"
                         HorizontalOptions="Center"
                         Text="{Binding BMI.Message}"
-                        TextColor="#9f9f9f"/>
+                        TextColor="#9f9f9f"
+                        Margin="0,0,0,1"/>
                     <gauge:SfRadialGauge Margin="0,-7,0,-55">
                         <gauge:SfRadialGauge.Axes>
                             <gauge:RadialAxis
@@ -107,7 +112,8 @@
                                 Minimum="0"
                                 ShowAxisLine="False"
                                 ShowLabels="False"
-                                ShowTicks="False">
+                                ShowTicks="False"
+                                BackgroundColor="#00695C">
                                 <gauge:RadialAxis.Ranges>
                                     <gauge:RadialRange
                                         EndValue="18.5"
@@ -169,7 +175,8 @@
                                         NeedleEndWidth="15"
                                         NeedleLength="0.6"
                                         NeedleStartWidth="2"
-                                        Value="{Binding BMI.Result}"/>
+                                        Value="{Binding BMI.Result}"
+                                        />
                                 </gauge:RadialAxis.Pointers>
                             </gauge:RadialAxis>
                         </gauge:SfRadialGauge.Axes>
